@@ -4,11 +4,18 @@
     color: white;
     font-family: sans-serif;
 }
+  body {
+    background-color: lightblue;
+  }
+
+
 body{
     background-color: #001;
     display: flex;
-
+    margin-left: 240px; /* add this line */
+  
 }
+
 #welcome-message {
     /* خلفية علم فلسطين */
     background-image: url(pngtree-silky-wavy-palestine-flag-image_13942215.jpg);
@@ -103,19 +110,19 @@ body{
     text-transform: capitalize;
 }
 
-.menu{
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #123;
-    width: 60px;
+    width: 200px;
     height: 100vh;
     padding: 20px;
-    overflow: hidden;
+    overflow-y: auto;
     transition: .5s;
-
-}
-.menu:hover{
-    width: 260px;
-}
-ul{
+    z-index: 1000;
+    }
+    ul{
     list-style: none;
     position: relative;
     height: 95%;
@@ -172,7 +179,7 @@ ul li a i{
     flex-wrap: wrap;
     gap: 10px;
 }
-.data-info .box{
+.data-info .box {
     background-color: #123;
     height: 150px;
     flex-basis: 150px;
@@ -181,19 +188,38 @@ ul li a i{
     display: flex;
     align-items: center;
     justify-content: space-around;
-
-}
-.data-info .box i{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .data-info .box:hover {
+    transform: scale(1.1);
+  }
+  
+  .data-info .box i {
     font-size: 40px;
-
-}
-.data-info .box .data{
+    color: #fff;
+  }
+  
+  .data-info .box .data {
     text-align: center;
-}
-.data-info .box .data span{
+  }
+  
+  .data-info .box .data span {
+    display: block;
     font-size: 30px;
-}
-table{
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .data-info .box .data p {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+  }
+  table{
     width: 100%;
     text-align: center;
     border-spacing: 8px;
@@ -218,3 +244,27 @@ th{
     background-color: gold;
 color: black;
 }
+/* Media queries */
+@media only screen and (max-width: 3000px) {
+    /* Styles for desktop screens */
+    .menu {
+      width: 150px;
+      height: 100vh;
+
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .menu {
+      width: 150px;
+      height: 80vh;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .menu {
+      width: 150px;
+      height: 90vh;
+    }
+  }
+  

@@ -6,8 +6,9 @@
 
 }
 body{
-    background-color:  #001;
+    background-color: #001;
     display: flex;
+    margin-left: 240px; /* add this line */
 }
 
 .homesss {
@@ -33,11 +34,16 @@ body{
 
 
 .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #123;
-    width: 60px;
+    width: 200px;
     height: 100vh;
-    padding: 20px; 
-    overflow: hidden;
+    padding: 20px;
+    overflow-y: auto;
+    transition: .5s;
+    z-index: 1000;
 
 }
 .menu:hover{
@@ -102,4 +108,86 @@ ul li a i{
     list-style: none;
     color: #123;
     text-decoration: none;
+}
+.menu_opi{
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
+    
+}
+.menu_opi .container a{
+    width: 390px; /* ضبط عرض الحاوية */
+    margin: 0 ; /* مركزها أفقيا*/
+    background-color:  #e7ae4b ; /*أضف لون الخلفية لرؤية الحاوية*/
+    padding: 10px; /*أضف بعض الفراغ لجعله يبدو أجمل*/
+    border-radius: 8%; /*علشان نخليه بدل مربع دائره يدي مظهر جميل*/
+    display: flex;
+    list-style: none;
+    color: #123;
+    text-decoration: none;
+
+}
+
+
+@media only screen and (max-width: 3000px) {
+    /* Styles for desktop screens */
+    .menu {
+      width: 150px;
+      height: 100vh;
+    }
+    .container{
+        width: 350px; /* ضبط عرض الحاوية */
+        margin: 50px; /* increase the margin to 30px for larger screens */
+        background-color:  #e7ae4b ; /*أضف لون الخلفية لرؤية الحاوية*/
+        padding: 6px; /*أضف بعض الفراغ لجعله يبدو أجمل*/
+        border-radius: 8%; /*علشان نخليه بدل مربع دائره يدي مظهر جميل*/
+        display: flex;
+        list-style: none;
+        color: #123;
+        text-decoration: none;
+        
+        
+
+    }
+    
+    .menu_opi .container a{
+        width: 340px; /* ضبط عرض الحاوية */
+             /* مركزها أفقيا*/
+        background-color:  #e7ae4b ; /*أضف لون الخلفية لرؤية الحاوية*/
+        padding: 6px; /*أضف بعض الفراغ لجعله يبدو أجمل*/
+        border-radius: 8%; /*علشان نخليه بدل مربع دائره يدي مظهر جميل*/
+        display: flex;
+        list-style: none;
+        color: #123;
+        text-decoration: none;
+    
+    }
+    .menu_opi{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        list-style: none;
+        text-decoration: none;
+    }
+    
+}
+
+@media only screen and (max-width: 799px) {
+.menu {
+  width: 150px;
+  height: 80vh;
+}
+}
+
+@media only screen and (max-width: 480px) {
+.menu {
+  width: 150px;
+  height: 90vh;
+}
 }
