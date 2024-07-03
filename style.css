@@ -250,6 +250,7 @@ color: black;
     width: 150px;
     height: 100vh;
   }
+
   .container{
       width: 400px; /* ضبط عرض الحاوية */
       margin: 20px; /* add this line to add a 20px margin between each container */
@@ -291,15 +292,75 @@ color: black;
 
 
 @media only screen and (max-width: 768px) {
-  .menu {
-    width: 150px;
-    height: 80vh;
+  .data-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 300px;
+}
+
+  .data-info .box .data span {
+    font-size: 24px;
+  }
+
+  .data-info .box {
+    width: calc(33.33% - 10px);
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+    .menu {
+    width: 160px;
+    height: 130vh;
   }
 }
 
 @media only screen and (max-width: 480px) {
+  .data-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 200px;
+}
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .data-info .box .data span {
+    font-size: 12px;
+  }
+
+  .data-info .box {
+    width: calc(100% - 10px);
+  }
+
+  body {
+    font-size: 14px;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
   .menu {
-    width: 150px;
-    height: 90vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 165px;
+    height: 130vh;
   }
 }
