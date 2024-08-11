@@ -1,296 +1,89 @@
-*{
-    padding: 0;
-    margin: 0;
-    color: white;
-    font-family: sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #283048, #859398);
+  color: #fff;
+  overflow-x: hidden;
 }
-  body {
-    background-color: lightblue;
-  }
 
+.container {
+  text-align: center;
+  padding: 50px 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
 
-body{
-  background-color: #001;
+.container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+header h1 {
+  color: #ffdd59;
+  font-size: 3em;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.tool-grid {
   display: flex;
-  margin-left: 240px; /* add this line */
-
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.homess{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid white;
-    flex-shrink: 0;
-
-
-}
-.homess img{
-    width: 100%;
-    
-}
-.homes{
-    display: flex;
-    align-self: center;
-    gap: 30px;
-}
-.homes h2{
-    font-size: 20px;
-    text-transform: capitalize;
-}
-
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #123;
-  width: 200px;
-  height: 100vh;
+.tool {
+  background-color: #4e342e;
+  border-radius: 10px;
   padding: 20px;
-  overflow-y: auto;
-  transition: .5s;
-  z-index: 1000;
-  }
-    ul{
-    list-style: none;
-    position: relative;
-    height: 95%;
-}
-ul li a{
-    display: block;
-    text-decoration: none;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-ul li a:hover, .homes{
-    background-color: #ffffff55;
-
-}
-.yout1{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    flex-shrink: 0;
-}
-.yout1 a{
-    background-color: #a00;
-
-}
-ul li a i{
-    font-size: 30px;
-}
-.content{
-    width: 100%;
-    margin: 10px;
-}
-.title-info{
-    background-color: #0481ff;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 8px;
-    margin: 10px 0;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+  transform: translateY(20px);
 }
 
-.data-info .box:hover, td:hover{
-    background-color: #000000;
-
-}
-.data-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.data-info .box {
-    background-color: #123;
-    height: 150px;
-    flex-basis: 150px;
-    flex-grow: 1;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .data-info .box:hover {
-    transform: scale(1.1);
-  }
-  
-  .data-info .box i {
-    font-size: 40px;
-    color: #fff;
-  }
-  
-  .data-info .box .data {
-    text-align: center;
-  }
-  
-  .data-info .box .data span {
-    display: block;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .data-info .box .data p {
-    font-size: 14px;
-    color: #fff;
-    margin: 0;
-  }
-  table{
-    width: 100%;
-    text-align: center;
-    border-spacing: 8px;
-    
-}
-td, th{
-    background-color: #123;
-    height: 40px;
-    border-radius: 8px;
-}
-th{
-    background-color: #0080ff;
-}
-.جواب, .تعديلات{
-    padding: 6px;
-    border-radius: 6px;
-}
-.جواب{
-    background-color: green;
-}
-.تعديلات{
-    background-color: gold;
-color: black;
-}
-@media only screen and (max-width: 3000px) {
-  /* Styles for desktop screens */
-  .menu {
-    width: 150px;
-    height: 100vh;
-  }
-
-  .container{
-      width: 400px; /* ضبط عرض الحاوية */
-      margin: 20px; /* add this line to add a 20px margin between each container */
-      background-color:  #e7ae4b ; /*أضف لون الخلفية لرؤية الحاوية*/
-      padding: 6px; /*أضف بعض الفراغ لجعله يبدو أجمل*/
-      border-radius: 8%; /*علشان نخليه بدل مربع دائره يدي مظهر جميل*/
-      display: flex;
-      list-style: none;
-      color: #123;
-      text-decoration: none;
-      
-
-  }
-  .menu_opi{
-      width: 100%;
-      margin: 10px;
-      padding: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      list-style: none;
-      text-decoration: none;
-      
-  }
-  .menu_opi .container a{
-      width: 390px; /* ضبط عرض الحاوية */
-      margin: 0 ; /* مركزها أفقيا*/
-      background-color:  #e7ae4b ; /*أضف لون الخلفية لرؤية الحاوية*/
-      padding: 10px; /*أضف بعض الفراغ لجعله يبدو أجمل*/
-      border-radius: 8%; /*علشان نخليه بدل مربع دائره يدي مظهر جميل*/
-      display: flex;
-      list-style: none;
-      color: #123;
-      text-decoration: none;
-  
-  }
-  
+.tool img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
-
-@media only screen and (max-width: 768px) {
-  .data-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 300px;
+.tool p {
+  color: #ffcc80;
+  font-size: 1.2em;
+  margin: 0;
 }
 
-  .data-info .box .data span {
-    font-size: 24px;
-  }
-
-  .data-info .box {
-    width: calc(33.33% - 10px);
-  }
-
-  body {
-    font-size: 14px;
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-    .menu {
-    width: 160px;
-    height: 130vh;
-  }
+.tool:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  background-color: #5d4037;
+  opacity: 1;
 }
 
-@media only screen and (max-width: 480px) {
-  .data-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 200px;
+footer {
+  margin-top: 50px;
 }
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  .data-info .box .data span {
-    font-size: 12px;
-  }
+.help-btn {
+  background-color: #ffa726;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+}
 
-  .data-info .box {
-    width: calc(100% - 10px);
-  }
-
-  body {
-    font-size: 14px;
-  }
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 165px;
-    height: 130vh;
-  }
+.help-btn:hover {
+  background-color: #fb8c00;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
 }
